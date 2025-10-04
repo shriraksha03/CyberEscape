@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberEscape - Levels</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: url('CER.hp.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+      color: cyan;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    .levels-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 30px;
+      width: 90%;
+      max-width: 1000px;
+      justify-items: center;
+    }
+
+    .level-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      width: 100%;
+      color: white;
+      text-decoration: none;
+    }
+
+    .level-box:hover {
+      background-color: rgba(0, 255, 255, 0.3);
+      transform: scale(1.05);
+    }
+
+    .level-box span {
+      display: block;
+      font-size: 1rem;
+      color: #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Choose Your Level</h1>
+  
+  <div class="levels-container">
+    <a class="level-box" href="LEVEL-1.html">Level 1 <span>Phishing</span></a>
+    <a class="level-box" href="LEVEL-2.html">Level 2 <span>Password Security</span></a>
+    <a class="level-box" href="LEVEL-3.html">Level 3 <span>Social Engineering</span></a>
+    <a class="level-box" href="LEVEL-4.html">Level 4 <span>Malware Types</span></a>
+    <a class="level-box" href="LEVEL-5.html">Level 5 <span>Safe Browsing</span></a>
+    <a class="level-box" href="level6.html">Level 6 <span>Two-Factor Authentication</span></a>
+    <a class="level-box" href="level7.html">Level 7 <span>Insider Threats</span></a>
+    <a class="level-box" href="level8.html">Level 8 <span>Deepfake Defense</span></a>
+
+
+  </div>
+
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+  <script>
+    const clickSound = document.getElementById('clickSound');
+    const levelLinks = document.querySelectorAll('.level-box');
+
+    levelLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        clickSound.play();
+      });
+    });
+  </script>
+
+</body>
+</html>

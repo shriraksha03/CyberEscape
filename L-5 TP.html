@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 5 Complete</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('l-5transition.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #003366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border: 2px solid #99ccff;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #b3d9ff;
+      max-width: 650px;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #cce6ff;
+      margin-bottom: 20px;
+      color: #004a99;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #002b4d;
+    }
+
+    .countdown {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #006699;
+    }
+
+    .proceed-btn {
+      background-color: #a6d1ff;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .proceed-btn:hover {
+      background-color: #80bfff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Level 5 Complete!</h1>
+    <p>You’ve mastered the art of safe browsing and web hygiene.<br>Your online habits are now your first defense.</p>
+    <p>Up next: <strong>Two-Factor Authentication</strong> – let’s double your protection.</p>
+    <div class="countdown" id="countdown">Redirecting in 5 seconds...</div>
+    <button class="proceed-btn" onclick="goToNextLevel()">Proceed Now</button>
+  </div>
+
+  <script>
+    let timeLeft = 5;
+    const countdownEl = document.getElementById("countdown");
+
+    const countdown = setInterval(() => {
+      timeLeft--;
+      countdownEl.textContent = `Redirecting in ${timeLeft} seconds...`;
+      if (timeLeft <= 0) {
+        clearInterval(countdown);
+        goToNextLevel();
+      }
+    }, 1000);
+
+    function goToNextLevel() {
+      window.location.href = "LEVEL-6.html"; // Link to your Level 6 Briefing page
+    }
+  </script>
+</body>
+</html>

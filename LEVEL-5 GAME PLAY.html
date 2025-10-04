@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberEscape - Level 5: Safe Browsing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('L-5GP.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #0a1f33;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .game-container {
+      background: rgba(255, 255, 255, 0.8);
+      border: 2px solid #a6c8ff;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 700px;
+      box-shadow: 0 0 20px #b3d1ff;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: #004a99;
+      text-shadow: 0 0 8px #cce6ff;
+    }
+
+    .question {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      color: #003366;
+    }
+
+    .options button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #e6f2ff;
+      color: #003366;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #cce0ff;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #0077cc;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #a6d1ff;
+      color: #000;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .next-btn:hover {
+      background-color: #80bfff;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🌐 Safe Browsing</h1>
+    <div class="question" id="question">
+      Which of the following is a sign that a website is secure?
+    </div>
+    <div class="options">
+      <button onclick="checkAnswer('a')">a) URL starts with 'http://'</button>
+      <button onclick="checkAnswer('b')">b) Website has too many ads</button>
+      <button onclick="checkAnswer('c')">c) URL starts with 'https://' and shows a padlock icon</button>
+      <button onclick="checkAnswer('d')">d) It's a popular site on social media</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <button class="next-btn" id="nextBtn" onclick="goToNext()">Next Level</button>
+  </div>
+
+  <script>
+    function checkAnswer(choice) {
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+
+      if (choice === 'c') {
+        feedback.textContent = "✅ Correct! Always check for HTTPS and padlock.";
+        nextBtn.style.display = "inline-block";
+      } else {
+        feedback.textContent = "❌ Not quite. Look closely at the browser bar!";
+      }
+    }
+
+    function goToNext() {
+      window.location.href = "L-5 TP.html"; // Move to transition page
+    }
+  </script>
+</body>
+</html>

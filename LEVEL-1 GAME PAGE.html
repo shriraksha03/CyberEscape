@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberEscape - Level 1: Phishing Attack</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: url('L-1GP.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #00ffe7;
+    }
+
+    .game-container {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #00ffcc;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00ffcc;
+      max-width: 800px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .question {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+
+    .options button {
+      display: block;
+      width: 100%;
+      background-color: #00ffe7;
+      color: #000;
+      border: none;
+      padding: 15px;
+      margin: 10px 0;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    .options button:hover {
+      background-color: #00ccaa;
+    }
+
+    .result {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+
+    .next-level {
+      display: none;
+      margin-top: 30px;
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="question" id="question">
+      Which of the following email is a phishing attempt?
+    </div>
+    <div class="options">
+      <button onclick="checkAnswer(1)">support@paypal-security.com - “Urgent! Click to verify account”</button>
+      <button onclick="checkAnswer(2)">notifications@github.com - “New login detected from your device”</button>
+      <button onclick="checkAnswer(3)">noreply@google.com - “Your monthly account summary”</button>
+    </div>
+    <div class="result" id="result"></div>
+    <button class="next-level" id="nextBtn" onclick="goToNextLevel()">Next Level</button>
+  </div>
+
+  <script>
+    function checkAnswer(option) {
+      const result = document.getElementById("result");
+      const nextBtn = document.getElementById("nextBtn");
+
+      if (option === 1) {
+        result.textContent = "✅ Correct! That email has a suspicious domain and urgency tone.";
+        result.style.color = "#00ffcc";
+        nextBtn.style.display = "inline-block";
+      } else {
+        result.textContent = "❌ Incorrect. That’s a legitimate email format. Try again!";
+        result.style.color = "#ff4444";
+        nextBtn.style.display = "none";
+      }
+    }
+
+    function goToNextLevel() {
+      // Navigate to Level 2 (replace with your level 2 page)
+      window.location.href = "L-1 TP.html";
+    }
+  </script>
+</body>
+</html>

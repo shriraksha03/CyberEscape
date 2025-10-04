@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberEscape Room</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background: url('CER_homepage.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', Courier, monospace;
+      color: #27a491;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #041410;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffcc, 0 0 20px #00cc99;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00cc99;
+      }
+      to {
+        text-shadow: 0 0 15px #00ffcc, 0 0 30px #00cc99;
+      }
+    }
+
+    p {
+      margin-bottom: 25px;
+      font-size: 1.2em;
+      text-shadow: 1px 1px 3px black;
+    }
+
+    button {
+      background-color: #00ffcc;
+      color: #0f2027;
+      padding: 12px 25px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0px 4px 15px rgba(0, 255, 204, 0.5);
+      transition: background 0.3s, transform 0.3s;
+      animation: pulse 2s infinite;
+    }
+
+    button:hover {
+      background-color: #00cc99;
+      transform: scale(1.1);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 204, 1);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(0, 255, 204, 0.4);
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: #00ffcc;
+      font-size: 0.9em;
+      text-shadow: 1px 1px 2px black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Welcome to CyberEscape</h1>
+    <p>Your digital instincts are your only weapon – can you outsmart the traps and conquer the cyber world before it’s too late?</p>
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <footer>© 2025 CyberEscape | Built with 💻 by Shri Raksha & Team</footer>
+
+  <script>
+    function startGame() {
+      alert("Game is starting!");
+      // Or redirect to next level like: window.location.href = "CYBERESCAPE LEVELPAGE.html";
+    }
+  </script>
+
+</body>
+</html>

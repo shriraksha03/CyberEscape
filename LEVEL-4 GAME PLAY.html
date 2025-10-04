@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberEscape - Level 4: Malware Types</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('L-4GP.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .game-container {
+      background: rgba(0, 0, 0, 0.75);
+      border: 2px solid #ff4d4d;
+      padding: 40px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 700px;
+      box-shadow: 0 0 20px #ff4d4d;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+      color: #ff6666;
+      text-shadow: 0 0 10px #ff1a1a;
+    }
+
+    .question {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .options button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff4d4d;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #e60000;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #00ffcc;
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      padding: 12px 30px;
+      background-color: #00ffe7;
+      color: #000;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .next-btn:hover {
+      background-color: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>🦠 Malware Types</h1>
+    <div class="question" id="question">
+      Which of the following is a type of malware that encrypts your files and demands payment?
+    </div>
+    <div class="options">
+      <button onclick="checkAnswer('a')">a) Spyware</button>
+      <button onclick="checkAnswer('b')">b) Ransomware</button>
+      <button onclick="checkAnswer('c')">c) Worm</button>
+      <button onclick="checkAnswer('d')">d) Adware</button>
+    </div>
+    <div class="feedback" id="feedback"></div>
+    <button class="next-btn" id="nextBtn" onclick="goToNext()">Next Level</button>
+  </div>
+
+  <script>
+    function checkAnswer(choice) {
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+
+      if (choice === 'b') {
+        feedback.textContent = "✅ Correct! Ransomware locks your files until you pay.";
+        nextBtn.style.display = "inline-block";
+      } else {
+        feedback.textContent = "❌ Incorrect. Try again!";
+      }
+    }
+
+    function goToNext() {
+      window.location.href = "L-4 TP.html"; // Transition to Level 5
+    }
+  </script>
+</body>
+</html>

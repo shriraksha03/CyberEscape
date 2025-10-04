@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 2 Briefing</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('CER.L-2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #00ffe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .briefing-box {
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px solid #00ffcc;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px #00ffcc;
+      max-width: 700px;
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .start-btn {
+      background-color: #00ffe7;
+      color: #000;
+      padding: 12px 30px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .start-btn:hover {
+      background-color: #00ccaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="briefing-box">
+    <h1>🛡️ Mission Briefing: Level 2</h1>
+    <p>
+      Great work, Agent! You've defeated the phishing attempt.<br><br>
+      Now, a new threat has emerged: <strong>malware embedded in software downloads</strong> is spreading across the network.<br><br>
+      Your mission is to identify and isolate the malicious file before it breaches the system.
+    </p>
+    <button class="start-btn" onclick="startGame()">Begin Level 2</button>
+  </div>
+
+  <script>
+    function startGame() {
+      window.location.href = "LEVEL-2 GAME PAGE.html";
+    }
+  </script>
+</body>
+</html>
